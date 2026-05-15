@@ -1,0 +1,252 @@
+@font-face {
+    font-family: 'fredoka';
+    src: url(Fredoka/Fredoka-VariableFont_wdth,wght.ttf) format(truetype);
+    font-display: swap;
+     /*url('path/to/your/font-file.woff2') format('woff2'),
+         url('path/to/your/font-file.woff') format('woff');*/
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.logo {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100px;
+  width: 180px;
+  display: flex;
+  background-color: #E1322B;
+}
+ header {
+    background-color: #E1322B;
+    width: 100%;
+    max-width: 100%;
+ }
+
+body {
+    margin: 0;
+    font-family: 'fredoka', sans-serif;
+    /*height: 1500px; */
+    display: flex;
+    flex-direction: column;
+    color: white;
+    letter-spacing: 1.5px;
+}
+
+nav {
+    padding-top: 0rem;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1200px;
+    background: #E1322B; 
+    justify-content: center;
+    display: flex;
+    padding-bottom: 0.4rem;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex; 
+}
+
+nav ul li {
+    position: relative;
+    margin: 0 30px 0 0;
+}
+/* Added dropdown symbol to see which menu items had drowpdowns can be deleted sometime
+li > a:after {
+    content: ' >>' /*dropdown symbol 
+}
+
+li > a:only-child:after {
+    content: '';
+}
+*/
+
+nav ul li a {
+    padding: 20px 100px; /*Change position of list elements*/
+    display: block;
+    color:white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 120%;
+    transition: opacity 0.2s ease; 
+}
+
+nav ul li a:hover {
+    opacity: 0.5;
+}
+
+nav ul li ul { /*Dropdown menu*/
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 80%; /*How big menu is*/
+    left: 9%; /*Moves where dropdown menu appears*/
+    background: #E1322B;
+    min-width: 200px;
+    border-radius: 0 0 30px 30px;
+    border-bottom: solid 2px #534E4A;
+    border-right: solid 2px #534E4A;
+    border-left: solid 2px #534E4A;
+    z-index: 1000;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transform: translateY(-10px);
+    transition:
+        opacity 0.3s ease 0.1s,
+        max-height 1s ease;
+}
+
+nav ul li:hover > ul {
+    display: block;
+    opacity: 1;
+    max-height: 500px;
+}
+
+
+/*borders between dropdown headings*/
+nav ul li ul li { 
+    display: flex;
+    width: 80%; /*moves the text in the drop down menus*/
+    justify-content: center;
+    margin: 0 auto;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+/*Styles for the line between items in dropdown nav menu */
+nav ul li ul li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%; /* Start 10% from left */
+    right: 10%; /* End 1% from right */
+    height: 1px;
+    background: linear-gradient(to right,
+        transparent 0%,
+        #534E4A 35%,
+        #534E4A 65%,
+        transparent 100%);
+}
+
+
+
+/* Specific styles for foot-link class */
+.foot-link:link {
+    color: #018efa;
+    background-color: transparent;
+}
+
+.foot-link:visited {
+    color: #009685;
+    background-color: transparent;
+}
+
+.foot-link:hover {
+    color: #534E4A;
+    background-color: transparent;
+    text-decoration: underline; /* Optional: adds underline on hover */
+}
+
+.foot-link:active {
+    color: #018efa;
+    background-color: transparent;
+}
+
+
+/*mobile functionality*/
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    nav ul li ul {
+        position: static;
+        border-radius: 0;
+        border: none;
+    }
+}
+/*Scrolling GIF, needs to be changed with Wolf guy gif*/
+.scroll-guy {
+  position: fixed;
+  top: 700px;
+  right: 20px;
+  width: 150px;
+  z-index: 1000;
+}
+
+main {
+    flex: 1; /*https://www.codestudy.net/blog/how-do-you-get-the-footer-to-stay-at-the-bottom-of-a-web-page/ This website to set footer at bottom*/
+}
+
+
+footer {
+    display: flex;
+    background-color: #E1322B;
+    justify-content: space-between;
+    text-align: center;
+    padding: 10px 0 0 0;
+    flex-wrap: wrap;
+}
+
+.foot-address {
+    text-align: left !important;
+    padding-left: 23rem;
+    flex: 1 1 100%;
+    min-width: 100%;
+}
+
+.left-foot-content, .right-foot-content {
+    flex: 1;
+    padding: 5px 0 10px 0px;
+}
+
+.social-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.social-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    text-decoration: none;
+    align-items: center;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none !important;
+    transition: opacity 0.2s ease;
+    padding: 5px 15px;
+    width: fit-content;
+    box-sizing: border-box;
+}
+
+.social-text {
+    font-size: 85%;
+    border-radius: 40px;
+    border: solid 2px white;
+    padding: 1px 10px 4px 10px;
+    background-color: black;
+    color: white;
+    line-height: 1;
+}
+
+.social-link:hover {
+    opacity: 0.8;
+}
